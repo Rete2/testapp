@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-color: cadetblue; font-size: 14px
+}
+
+img {
+  width: 200px;
+  float:left
+}
+
+.one {color: red}
+.two {color: blue}
+.test {color: yellow}
