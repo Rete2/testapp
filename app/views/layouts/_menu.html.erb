@@ -1,10 +1,13 @@
 <!-- Partial file with "_", file that another file refers to  -->
 
-<ul>
-  <li><a href="/contact">Contact page</a></li><!-- html -->
+<ul class ="nav navbar-nav">
+  <%= content_tag :li, class: current_page?(contact_url) ? 'active' : '' do %> <!-- ruby if else  -->
+    <a href="/contact">Contact page</a> <!-- html -->
+  <% end %>
+
   <li><%=link_to 'Home About',home_about_url %></li>
   <li><%=link_to 'Contact Page',contact_url %></li>
   <li><%=link_to 'Startpage',startpage_index_url %></li>
-  <li><%=link_to 'Home Index',home_index_url %></li> <!-- rails -->
+  <li><%=link_to 'Home Index',home_index_url, target: '_blank' %></li> <!-- rails -->
   <li><a href="/">Home page</a></li>
 </ul>
