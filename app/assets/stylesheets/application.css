@@ -15,14 +15,20 @@
  */
 
 body {
-  background-color: cadetblue; font-size: 14px
+  background-color: cadetblue; font-size: 14px;
 }
 
 img {
   width: 200px;
-  float:left
+  float:left;
+  border-radius: 50%;
+  -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera, Firefox */
+    filter: grayscale(100%);
 }
 
+
+.text1 {color: red; text-align: right}
+.text2 {color: blue; text-align: left}
 .one {color: red}
 .two {color: blue}
-.test {color: yellow}
+.yellow {color: yellow}
