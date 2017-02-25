@@ -5,6 +5,11 @@ Rails.application.routes.draw do
   get 'home' => 'home#index'
   get 'startpage/index'
   get 'contact' => 'contact#index'
+  get 'cake/index'
+  resources :users, only: [:index, :show]
+  # get 'users' => 'users#index'
+  # get 'users/:id' =>'users#show'  #first part: URL; after => where it goes in the controllers,
+  # id gets added to params
 
   root 'welcome#index'
 

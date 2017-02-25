@@ -1,1 +1,27 @@
-about
+<% content_for :page_title do %>  <!-- rails; content_for = refers to application.html.erb "<%=yield :page_title %>" -->
+<h1> <div class="yellow">
+  About
+</div> </h1>
+<% end %>
+
+
+  <img class="pic1" src="/assets/bild1.jpg" alt="Abendstimmung" />
+  <img class="pic1" src="/assets/bild2.jpg" alt="Doppelbelichtung" />
+  <img class="pic2" src="/assets/cat.jpg" alt="red cat" />
+  <audio controls autoplay>
+          <source src="assets/school_night.mp3" type="audio/mpeg">
+  </audio>
+
+ <p class ="text1">
+  Lorem Ipsum is simply <span class="one"> dummy </span> text of the printing and typesetting industry.
+  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+  when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+  It has survived not only five centuries, but also the leap into electronic typesetting,
+  remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+  Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+ 	&#9829  	&#9829  	&#9829
+</p>
+
+
+
+<span class ="text2">&#9792</span> <span class ="text1"> &#9792</span>
