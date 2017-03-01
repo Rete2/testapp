@@ -2,14 +2,22 @@
 <html>
 <head>
   <title>Testapp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %> <!-- links stylesheet from assets/stylesheets/application.css -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css"> <!-- alles was nicht definiert ist, wird von bootstrao genommen, alles was separat defiintiert ist, ist nicht bootstrap -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %> <!-- links stylesheet from assets/stylesheets/application.css; overrules bootstrap because it comes after bootstrap -->
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-<%= render 'layouts/menu' %> <!-- takes information from the file _menu -->
 
-<%= yield %>
+<body>
+
+  <%= render 'layouts/header' %> <!-- takes information from the file _header.html.erb -->
+
+  <div class="container">         <!-- bootstrap needs the container -->
+    <%= yield :page_title %>
+    <%= yield %> <!-- takes information from the template (views) -->
+  </div>
+
 
 </body>
 </html>

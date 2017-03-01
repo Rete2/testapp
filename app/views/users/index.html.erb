@@ -1,0 +1,26 @@
+<% content_for :page_title do %>  <!-- rails; content_for = refers to application.html.erb "<%=yield :page_title %>" -->
+<h1> <div>
+  Users
+</div> </h1>
+<% end %>
+
+
+
+<table class='table-hover' style="width:100%">
+  <tr>
+    <th>ID</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Address</th>
+    <th>Email</th>
+  </tr>
+<% @users.each do |user| %>
+  <tr>
+    <td><%= link_to user.id, user_path(user) %></td>
+    <td><%= user.first_name%></td>
+    <td><%= user.last_name%></td>
+    <td><%= user.address%></td>
+    <td><%= user.email%></td>
+  </tr>
+<% end %>
+</table>

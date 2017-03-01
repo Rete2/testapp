@@ -1,0 +1,10 @@
+<% content_for :page_title do %>  <!-- rails; content_for = refers to application.html.erb "<%=yield :page_title %>" -->
+<h1> <div class="blue">
+ Hello  <%= @user.first_name %>
+   <!--ruby that will be output in html-->
+</div> </h1>
+<h4>First Name: <%= @user.first_name %></h4>
+<h4>Last Name: <%= @user.last_name %></h4>
+<h4>Address: <%= @user.address %></h4>
+<h4>Email: <%= @user.email %></h4>
+<% end %>
