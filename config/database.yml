@@ -10,12 +10,12 @@
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 #
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
   encoding: utf8
   pool: 5
-  username: root
+  host: localhost
+  username: rete
   password: password
-  socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
