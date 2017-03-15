@@ -18,4 +18,12 @@ class UsersController < ApplicationController
   #  @user.address = params[:address]
  end
 
+ #this is needed to display the form and is a GET request
+ def new
+ end
+
+#
+ def create
+ end
+
 end
