@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
  def show
    @user = User.find_by(id: params[:id])
-   # user is looked for in the db by the column first_name,the value is taken from the URL defined in the routes
+   # user is looked for in the db by the column id,the value is taken from the URL defined in the routes
    #
 
   # first attempt
@@ -24,6 +24,11 @@ class UsersController < ApplicationController
 
 #
  def create
+   #Create user in db, show page of created user
+  @user = User.new(params.require(:user).permit(:first_name,:last_name,:email,:address))
+
+  @user.save
+  redirect_to @user
  end
 
 end
