@@ -20,15 +20,20 @@ class UsersController < ApplicationController
 
  #this is needed to display the form and is a GET request
  def new
+   @user = User.new
  end
 
-#
+
  def create
    #Create user in db, show page of created user
   @user = User.new(params.require(:user).permit(:first_name,:last_name,:email,:address))
 
-  @user.save
-  redirect_to @user
+  if @user.save
+    redirect_to @user
+  else
+    render :new
+  end
  end
+
 
 end
