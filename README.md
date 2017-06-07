@@ -1,8 +1,5 @@
 # README
 
-# Title
+# Testapp Project
 
-## Subtitle
-
-### header
-this is a rails application
+## This is how we learn about rails application at Ruby Sprouts
